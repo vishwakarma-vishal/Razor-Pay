@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600&display=swap">
+
+    <title>Razor pay clone</title>
+
+    <style>
+        /* text animation  */
+        @keyframes textChange {
+
+            0%,
+            10% {
+                transform: translateY(0);
+            }
+
+            20%,
+            30% {
+                transform: translateY(-100%);
+            }
+
+            40%,
+            50% {
+                transform: translateY(-200%);
+            }
+
+            60%,
+            70% {
+                transform: translateY(-300%);
+            }
+
+            80%,
+            90% {
+                transform: translateY(-400%);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .animate-text-change {
+            animation: textChange 10s infinite;
+        }
+
+        /* image horizontal scrolling animation */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-200%);
+            }
+        }
+
+        .scrolling {
+            animation: scroll 90s linear infinite;
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body class="font-mullish">
+    <!--navbar-->
+    <nav class="w-full px-10 flex gap-6 items-center ">
+        <!--image-->
+        <a href="/" class="cursor-pointer px-4 ">
+            <img src="assets/logo.svg" class="w-[120px] h-[30px]" />
+        </a>
+
+        <!--menu-->
+        <ul class="flex gap-4">
+            <li
+                class="relative py-7 text-md text-gray-600 flex flex-col justify-between items-center group hover:text-blue-500 transition-all duration-200 cursor-pointer">
+                <a>Payments</a>
+                <div class="absolute bottom-3 h-1 w-[90%] bg-blue-500 hidden group-hover:block"></div>
+            </li>
+            <li
+                class="relative py-7 text-md text-gray-500 flex flex-col justify-between items-center gap-4 group hover:text-blue-500 transition-all duration-200 cursor-pointer">
+                <a>Banking+</a>
+                <div class="absolute bottom-3 h-1 w-[90%] bg-blue-500 hidden group-hover:block"></div>
+            </li>
+            <li
+                class="relative py-7 text-md text-gray-500 flex flex-col justify-between items-center gap-4 group hover:text-blue-500 transition-all duration-200 cursor-pointer">
+                <a>Partners</a>
+                <div class="absolute bottom-3 h-1 w-[90%] bg-blue-500 hidden group-hover:block"></div>
+            </li>
+            <li
+                class="relative py-7 text-md text-gray-500 flex flex-col justify-between items-center gap-4 group hover:text-blue-500 transition-all duration-200 cursor-pointer">
+                <a>Resources</a>
+                <div class="absolute bottom-3 h-1 w-[90%] bg-blue-500 hidden group-hover:block"></div>
+            </li>
+            <li
+                class="relative py-7 text-md text-gray-500 flex flex-col justify-between items-center gap-4 group hover:text-blue-500 transition-all duration-200 cursor-pointer">
+                <a>Supoort</a>
+                <div class="absolute bottom-3 h-1 w-[90%] bg-blue-500 hidden group-hover:block"></div>
+            </li>
+            <li
+                class="relative py-7 text-md text-gray-500 flex flex-col justify-between items-center gap-4 group hover:text-blue-500 transition-all duration-200 cursor-pointer">
+                <a>Pricing</a>
+            </li>
+        </ul>
+
+        <!--right menu-->
+        <div class="flex ml-auto gap-4">
+            <img src="assets/indian-flag.svg" class="w-8">
+            <button class="text-sm font-semibold text-blue-700 px-4 py-2 hover:bg-gray-200 rounded">Log In</button>
+            <button class="text-sm font-semibold text-white bg-blue-600 px-6 py-2 rounded">
+                Sing Up
+                <i class="fa-solid fa-arrow-right text-xs pl-1"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!--hero section-->
+    <section class="h-[85vh] px-14 pt-3 bg-[#F0F5FF]">
+        <div
+            class="h-[90%] bg-[url('/assets/hero-img.png')] bg-contain bg-right-bottom bg-no-repeat flex items-center justify-start ">
+            <div class="flex flex-col gap-5">
+                <h1 class="text-5xl font-semibold leading-[1.2]">
+                    <span class=" text-blue-700">Advanced Payment Solutions</span><br />
+                    for India's finest disruptors
+                </h1>
+                <p class="text-gray-500">Automated Payroll & Compliances | Built for Startups & Enterprises</p>
+                <div>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-sm">
+                        Sing Up Now
+                        <i class="fa-solid fa-arrow-right text-sm pl-1"></i>
+                    </button>
+                    <a href="#" class="pl-4 text-blue-600 font-bold hover:underline">Know More</a>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="relative h-[5%] w-11/12 mx-auto py-6 px-4 bg-white rounded-lg flex items-center justify-between overflow-hidden cursor-pointer group shadow hover:shadow-xl">
+            <!--for design-->
+            <div class="absolute -left-1 w-2 h-5 bg-blue-600 rounded-xl"></div>
+
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="text-sm h-12 flex items-center">
+                    I'm here to
+                    <div class="ml-2 text-gray-500 overflow-hidden h-5 text-sm flex flex-col justify-center">
+                        <div class="h-5 animate-text-change">
+                            <span class="block h-5">Accept Payments</span>
+                            <span class="block h-5">Make Payouts</span>
+                            <span class="block h-5">Start Business Banking</span>
+                            <span class="block h-5">Automate Payrolls</span>
+                            <span class="block h-5">Get Credit & Loans</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center gap-2 text-gray-400 text-sm">
+                <p class="group-hover:text-black">// Find the best product for your Business</p>
+                <i
+                    class="fa-solid fa-arrow-right bg-gray-200 px-2 py-1.5 rounded-md transition-all duration-100 group-hover:bg-blue-700 group-hover:text-white group-hover:border-transparent "></i>
+            </div>
+        </div>
+    </section>
+
+    <!--brand horizontal slider-->
+    <section
+        class="my-2 w-full overflow-hidden flex items-center whitespace-nowrap py-10 px-8 h-auto grayscale hover:grayscale-0  bg-white">
+        <div class="scrolling flex gap-14">
+            <img src="./assets/Brands/apollo-munich-new.avif" alt="apollo munich logo" class="h-14">
+            <img src="./assets/Brands/ather.avif" alt="ather logo" class="h-14">
+            <img src="./assets/Brands/bmw.avif" alt="bmw logo" class="h-14">
+            <img src="./assets/Brands/bookmyshow.avif" alt="bookmyshow logo" class="h-14">
+            <img src="./assets/Brands/cleartax.avif" alt="cleartax logo" class="h-14">
+            <img src="./assets/Brands/cure-fit.avif" alt="cure-fit logo" class="h-14">
+            <img src="./assets/Brands/goibibo-new.avif" alt="goibibo logo" class="h-14">
+            <img src="./assets/Brands/niit.avif" alt="niit logo" class="h-14">
+            <img src="./assets/Brands/nykaa-new.avif" alt="nykaa logo" class="h-14">
+            <img src="./assets/Brands/paisa-bazaar.avif" alt="paisa-bazaar logo" class="h-14">
+            <img src="./assets/Brands/swiggy.avif" alt="swiggy logo" class="h-14">
+            <img src="./assets/Brands/unacademy.avif" alt="unacademy logo" class="h-14">
+            <img src="./assets/Brands/urban-company.avif" alt="urban-company logo" class="h-14">
+            <img src="./assets/Brands/zerodha.avif" alt="zerodha logo" class="h-14">
+            <img src="./assets/Brands/Zoho.avif" alt="zoho logo" class="h-14">
+
+            <img src="./assets/Brands/apollo-munich-new.avif" alt="apollo munich logo" class="h-14">
+            <img src="./assets/Brands/ather.avif" alt="ather logo" class="h-14">
+            <img src="./assets/Brands/bmw.avif" alt="bmw logo" class="h-14">
+            <img src="./assets/Brands/bookmyshow.avif" alt="bookmyshow logo" class="h-14">
+            <img src="./assets/Brands/cleartax.avif" alt="cleartax logo" class="h-14">
+            <img src="./assets/Brands/cure-fit.avif" alt="cure-fit logo" class="h-14">
+            <img src="./assets/Brands/goibibo-new.avif" alt="goibibo logo" class="h-14">
+            <img src="./assets/Brands/niit.avif" alt="niit logo" class="h-14">
+            <img src="./assets/Brands/nykaa-new.avif" alt="nykaa logo" class="h-14">
+            <img src="./assets/Brands/paisa-bazaar.avif" alt="paisa-bazaar logo" class="h-14">
+            <img src="./assets/Brands/swiggy.avif" alt="swiggy logo" class="h-14">
+            <img src="./assets/Brands/unacademy.avif" alt="unacademy logo" class="h-14">
+            <img src="./assets/Brands/urban-company.avif" alt="urban-company logo" class="h-14">
+            <img src="./assets/Brands/zerodha.avif" alt="zerodha logo" class="h-14">
+            <img src="./assets/Brands/Zoho.avif" alt="zoho logo" class="h-14">
+        </div>
+    </section>
+
+    <!--Features-->
+    <section class="h-auto bg-[#F2F4F8] py-20 px-10">
+        <div>
+            <h2 class="text-5xl font-semibold ">
+                The all in one
+                <span class="text-green-600">finance platform</span><br />
+                you've been looking for
+            </h2>
+
+            <ul class="flex mt-8 gap-8 font-semibold">
+                <li class="text-gray-400 border-r-[1px] border-gray-300 pr-5">With Razorpay, you can:</li>
+                <li>Accept Payments</li>
+                <li>Make Payouts</li>
+                <li>Start Business Banking</li>
+                <li>Automate Payroll</li>
+                <li>Get Credit & Loans</li>
+            </ul>
+        </div>
+
+        <div class="mt-20 h-auto p-12 w-full bg-white m-auto">
+            <h3 class="text-4xl font-semibold">Accept Payments</h3>
+
+            <ul class="mt-2 py-4 flex gap-6 font-semibold text-gray-400 border-b-[1px]">
+                <li class="relative active text-blue-600">Top Products
+                    <div class="absolute w-full h-[1px] top-10 bg-blue-600"></div>
+                </li>
+                <li>On Website/ App</li>
+                <li>Plugins</li>
+                <li>On Social Media</li>
+                <li>In-store</li>
+                <li>International</li>
+                <li>With Smart Add-ons</li>
+            </ul>
+
+            <div class="h-[470px] flex items-center gap-4">
+                <div class="w-1/4 border h-auto rounded-sm group cursor-pointer">
+                    <img class="h-[280px] relative" src="./assets/Cards/xl-product-card-pg-2x.avif" alt="">
+                    <div class="h-[100px] p-4 relative bg-white group-hover:-top-10 transition-all duration-200">
+                        <h4 class="text-lg font-semibold">Payment Gateway</h4>
+                        <p class="text-sm text-gray-500">Offer a seamless payment experience on your website and app</p>
+
+                        <div class="mt-3 hidden transition-all duration-200 group-hover:block">
+                            <button
+                                class="bg-blue-600 hover:bg-blue-800 text-white text-sm font-semibold px-3 py-1.5 rounded-sm">
+                                Sign Up
+                                <i class="fa-solid fa-arrow-right text-xs pl-1"></i>
+                            </button>
+                            <a href="#" class="pl-4 text-sm text-blue-600 font-semibold hover:underline ">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-1/4 border h-auto rounded-sm group cursor-pointer">
+                    <img class="h-[280px] relative" src="./assets/Cards/xl-product-card-pos-image-2x.avif" alt="">
+                    <div class="h-[100px] p-4 relative bg-white group-hover:-top-10 transition-all duration-200">
+                        <h4 class="text-lg font-semibold">Razorpay POS</h4>
+                        <p class="text-sm text-gray-500">Accept seamless in-store payments with India's best POS
+                            solution.</p>
+
+                        <div class="mt-3 hidden transition-all duration-200 group-hover:block">
+                            <button
+                                class="bg-blue-600 hover:bg-blue-800 text-white text-sm font-semibold px-3 py-1.5 rounded-sm">
+                                Sign Up
+                                <i class="fa-solid fa-arrow-right text-xs pl-1"></i>
+                            </button>
+                            <a href="#" class="pl-4 text-sm text-blue-600 font-semibold hover:underline ">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-1/4 border h-auto rounded-sm group cursor-pointer">
+                    <img class="h-[280px] relative" src="./assets/Cards/xl-payment-link-product-img-2x.avif" alt="">
+                    <div class="h-[100px] p-4 relative bg-white group-hover:-top-10 transition-all duration-200">
+                        <h4 class="text-lg font-semibold">Payment Links</h4>
+                        <p class="text-sm text-gray-500">Create and link over email, text and social to accept payments
+                            instanty.</p>
+
+                        <div class="mt-3 hidden transition-all duration-200 group-hover:block">
+                            <button
+                                class="bg-blue-600 hover:bg-blue-800 text-white text-sm font-semibold px-3 py-1.5 rounded-sm">
+                                Sign Up
+                                <i class="fa-solid fa-arrow-right text-xs pl-1"></i>
+                            </button>
+                            <a href="#" class="pl-4 text-sm text-blue-600 font-semibold hover:underline ">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-1/4 border h-auto rounded-sm group cursor-pointer">
+                    <img class="h-[280px] relative" src="./assets/Cards/xl-optimizer-product-image-2x.avif" alt="">
+                    <div class="h-[100px] p-4 relative bg-white group-hover:-top-10 transition-all duration-200">
+                        <h4 class="text-lg font-semibold">Payment Integration</h4>
+                        <p class="text-sm text-gray-500">Effortlessly accept payments without the need to know coding.
+                        </p>
+
+                        <div class="mt-3 hidden transition-all duration-200 group-hover:block">
+                            <button
+                                class="bg-blue-600 hover:bg-blue-800 text-white text-sm font-semibold px-3 py-1.5 rounded-sm">
+                                Sign Up
+                                <i class="fa-solid fa-arrow-right text-xs pl-1"></i>
+                            </button>
+                            <a href="#" class="pl-4 text-sm text-blue-600 font-semibold hover:underline ">Know More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Action-->
+    <section class="h-auto py-16 px-24">
+        <div>
+            <h2 class="text-5xl font-semibold text-gray-800 leading-tight">
+                Powering every industry.<br />
+                Powering all disruptors.
+            </h2>
+
+            <ul class="mt-8 py-4 flex gap-6 font-semibold text-gray-400 border-b-[1px]">
+                <li class="relative active text-blue-600">E-commerce
+                    <div class="absolute w-full h-[1px] top-10 bg-blue-600"></div>
+                </li>
+                <li>Education</li>
+                <li>BFSI</li>
+                <li>Saas</li>
+                <li>Freelance</li>
+            </ul>
+        </div>
+
+        <div
+            class="my-6 w-full h-[450px] bg-[url('/assets/study.avif')] bg-cover bg-center rounded flex items-center p-12">
+            <div class="bg-white w-1/2 h-full rounded p-10">
+                <h2 class="text-4xl font-semibold">
+                    Empower your<br />
+                    <span class="text-green-600">e-commerce business</span>
+                </h2>
+                <p class="mt-2 text-sm text-gray-600">Streamline payment management with a unified dashboard, enabling
+                    both online and in-person payment collection while enhancing conversion rates and minimizing fraud.
+                </p>
+
+                <div class="my-8 flex w-full h-8 gap-2 grayscale">
+                    <img src="./assets/Brands/nykaa-new.avif" alt="">
+                    <img src="./assets/Brands/unacademy.avif" alt="">
+                    <img src="./assets/Brands/ather.avif" alt="">
+                    <img src="./assets/Brands/paisa-bazaar.avif" alt="">
+                    <p class="text-xs my-auto">+46,000 others</p>
+                </div>
+
+                <button class="text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded">
+                    See Solutions
+                    <i class="fa-solid fa-arrow-right text-xs pl-1"></i>
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+    <!--Feedback-->
+    <section class="h-auto  bg-[#F2F4F8] py-24 px-20">
+        <h2 class="text-3xl font-semibold text-gray-800">
+            We have innovated at every instance, creating a disruption.
+        </h2>
+
+        <div class="flex gap-4 py-10">
+            <div class="w-9/12 h-full p-8 bg-white rounded flex flex-col gap-4">
+                <span class="text-gray-600 font-semibold">
+                    MoneySaver Export Account
+                </span>
+
+                <h4 class="text-[2.8rem] font-semibold text-gray-800 leading-tight">
+                    <span class="text-blue-600 font-semibold">
+                        Open a virtual account in 200+ countries,
+                    </span>
+                    save up to 50% on international bank transfer charges.
+                    Receive ACH/SWIFT/SEPA /BACS payments
+                </h4>
+
+                <p class="pt-10 text-sm text-gray-500">Receive international wire transfers with ease with a smart
+                    account</p>
+
+                <div>
+                    <button
+                        class="bg-blue-600 hover:bg-blue-800 text-white text-sm font-semibold px-3 py-1.5 rounded-sm">
+                        Sign Up
+                        <i class="fa-solid fa-arrow-right text-xs pl-1"></i>
+                    </button>
+                    <a href="#" class="pl-4 text-sm text-blue-600 font-semibold hover:underline ">Know More</a>
+                </div>
+            </div>
+
+            <div class="w-3/12 h-vh p-8 bg-white rounded flex flex-col justify-between">
+                <div class="space-y-4">
+                    <span class="text-gray-600 font-semibold">
+                        Turbo UPI
+                    </span>
+
+                    <h4 class="text-2xl font-semibold text-gray-800 leading-tight">
+                        <span class="text-blue-600 font-semibold">
+                            Experience a 5X faster checkout,
+                        </span>
+                        achieve a 10% success rate boost, all without any redirections to UPI apps.
+                    </h4>
+                </div>
+
+                <div class="space-y-4">
+                    <p class="pt-10 text-sm text-gray-500">Get India's fastest one-step UPI payment solution for
+                        businesses</p>
+
+                    <div>
+                        <button
+                            class="bg-blue-600 hover:bg-blue-800 text-white text-sm font-semibold px-3 py-1.5 rounded-sm">
+                            Sign Up
+                            <i class="fa-solid fa-arrow-right text-xs pl-1"></i>
+                        </button>
+                        <a href="#" class="pl-4 text-sm text-blue-600 font-semibold hover:underline ">Know More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
