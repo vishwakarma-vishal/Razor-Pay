@@ -17,7 +17,7 @@ This project is a frontend clone of the Razorpay website, created using React an
 
 ## Demo
 
-Check out the live demo of the project here: [https://vishal-razorpay-clone.netlify.app/](#)
+Check out the live demo of the project here: [razorpay-frontend-clone](https://vishal-razorpay-clone.netlify.app/)
 
 ## Features
 
